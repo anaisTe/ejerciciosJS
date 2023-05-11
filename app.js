@@ -148,6 +148,50 @@ function sumarArreglo(arr, inicial, final) {
     return res
 }
 
+//Transcribir ADN a ARN
+function transcribir(str) {
+    let change = str.replace(/G/g,'c').replace(/C/g,'g').replace(/T/g,'a').replace(/A/g,'u');
+    return change.toUpperCase();
+}
+
+//Capitalizar palabra
+function capitalizar1(str) {
+    let letter = str.charAt(0).toUpperCase() + str.slice(1);
+    return letter
+}
+
+//Capitalizar cada palabra
+function capitalizar2(str) {
+    let letter = str.split(" ");
+
+    for (let i = 0; i < letter.length; i++) {
+        letter[i] = letter[i].charAt(0).toUpperCase() + letter[i].slice(1)
+    }
+
+    return letter.join(" ")
+}
+
+//Encontrar el número máximo
+function max(arr) {
+    res = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (res < arr[i])
+        res = arr[i];
+    }
+    return res;
+}
+
+//Encontrar el número mínimo
+function min(arr) {
+    res = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] < res)
+        res = arr[i];
+    }
+    return res;
+}
+console.log(min([9, 6]))
+
 function asteriscos(str) {
     let ele = 0;
 
